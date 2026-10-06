@@ -4,6 +4,12 @@ import { profileFr } from "@/domains/profil-fr";
 export const runtime = "nodejs";
 export const maxDuration = 30;
 
+class GroqRequestError extends Error {
+  constructor(public readonly status: number) {
+    super(`Groq request failed with status ${status}`);
+  }
+}
+
 function buildContext(language: "en" | "fr") {
   const content = language === "fr" ? profileFr : profile;
   const instruction = language === "fr"
@@ -47,7 +53,7 @@ export async function POST(request: Request) {
         }),
         signal: controller.signal,
       });
-      if (!response.ok) throw new Error(`Groq unavailable (${response.status})`);
+      if (!response.ok) throw new GroqRequestError(response.status);
       const data = await response.json() as { choices?: Array<{ message?: { content?: string } }> };
       const answer = data.choices?.[0]?.message?.content?.trim();
       if (!answer) throw new Error("Groq returned an empty answer");
@@ -76,7 +82,17 @@ export async function POST(request: Request) {
     if (!response.ok) throw new Error("Ollama unavailable");
     const data = await response.json() as { message?: { content?: string } };
     return Response.json({ answer: data.message?.content?.trim() ?? (language === "fr" ? "Je n’ai pas trouvé de réponse." : "I could not find an answer.") });
-  } catch {
+  } catch (error) {
+    if (error instanceof GroqRequestError) {
+      const detail = error.status === 401
+        ? (language === "fr" ? "La clé Groq configurée dans Vercel est refusée (401)." : "The Groq key configured in Vercel was rejected (401).")
+        : error.status === 429
+          ? (language === "fr" ? "Le quota gratuit Groq est temporairement atteint (429)." : "The free Groq quota is temporarily exhausted (429).")
+          : error.status === 400
+            ? (language === "fr" ? "Groq refuse la configuration du modèle (400)." : "Groq rejected the model configuration (400).")
+            : (language === "fr" ? `Groq est temporairement indisponible (${error.status}).` : `Groq is temporarily unavailable (${error.status}).`);
+      return Response.json({ error: detail }, { status: 503 });
+    }
     return Response.json({
       error: language === "fr"
         ? "L’assistant est temporairement indisponible. Réessayez dans un instant."
