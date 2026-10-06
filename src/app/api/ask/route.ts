@@ -49,7 +49,8 @@ export async function POST(request: Request) {
           model: process.env.GROQ_MODEL ?? "openai/gpt-oss-20b",
           messages,
           temperature: 0.1,
-          max_completion_tokens: 220,
+          reasoning_effort: "low",
+          max_completion_tokens: 600,
         }),
         signal: controller.signal,
       });
