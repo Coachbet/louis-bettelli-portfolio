@@ -1,0 +1,65 @@
+[
+  {
+    "id": "learn-docker",
+    "title": "Docker",
+    "category": "Dev",
+    "done": false,
+    "createdAt": "2026-09-28T00:00:00.000Z"
+  },
+  {
+    "id": "learn-n8n",
+    "title": "n8n",
+    "category": "Dev",
+    "done": false,
+    "createdAt": "2026-09-28T00:00:00.000Z"
+  },
+  {
+    "id": "learn-rugby",
+    "title": "Comment faire un bon entraînement de rugby",
+    "category": "Sport",
+    "done": false,
+    "createdAt": "2026-09-28T00:00:00.000Z"
+  },
+  {
+    "id": "learn-nodejs",
+    "title": "Node.js",
+    "category": "Dev",
+    "done": false,
+    "createdAt": "2026-09-28T00:00:00.000Z"
+  },
+  {
+    "id": "learn-builder-app",
+    "title": "Ça veut dire quoi \"builder\" une application",
+    "category": "Dev",
+    "done": false,
+    "createdAt": "2026-09-28T00:00:00.000Z"
+  },
+  {
+    "id": "learn-tracker",
+    "title": "Comment fonctionne le tracker (de mon site)",
+    "category": "Dev",
+    "done": false,
+    "createdAt": "2026-09-28T00:00:00.000Z"
+  },
+  {
+    "id": "learn-builder-site",
+    "title": "Ça veut dire quoi \"builder\" un site",
+    "category": "Dev",
+    "done": false,
+    "createdAt": "2026-09-28T00:00:00.000Z"
+  },
+  {
+    "id": "learn-vercel",
+    "title": "Comment fonctionne Vercel",
+    "category": "Dev",
+    "done": false,
+    "createdAt": "2026-09-28T00:00:00.000Z"
+  },
+  {
+    "id": "learn-angular-react",
+    "title": "Différence entre Angular et React",
+    "category": "Dev",
+    "done": false,
+    "createdAt": "2026-09-28T00:00:00.000Z"
+  }
+]

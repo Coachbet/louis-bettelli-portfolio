@@ -1,0 +1,22 @@
+[
+  {
+    "id": "exemple1",
+    "title": "Pâtes à l'ail et huile d'olive (exemple)",
+    "category": "Rapide",
+    "ingredients": [
+      "200g de pâtes",
+      "3 gousses d'ail",
+      "4 c.à.s d'huile d'olive",
+      "Persil, sel, poivre",
+      "Parmesan"
+    ],
+    "steps": [
+      "Faire cuire les pâtes dans l'eau bouillante salée.",
+      "Faire dorer l'ail émincé dans l'huile d'olive à feu doux.",
+      "Égoutter les pâtes et les mélanger à l'ail et l'huile.",
+      "Ajouter persil, parmesan, sel et poivre."
+    ],
+    "note": "Recette d'exemple — modifie-la ou supprime-la depuis le dashboard.",
+    "createdAt": "2026-01-01T00:00:00.000Z"
+  }
+]

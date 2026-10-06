@@ -1,0 +1,16 @@
+[
+  {
+    "id": "exemple1",
+    "text": "Personnaliser mon profil (src/domains/profil.ts)",
+    "category": "Site",
+    "done": false,
+    "createdAt": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "exemple2",
+    "text": "Ajouter ma première pesée",
+    "category": "Santé",
+    "done": false,
+    "createdAt": "2026-01-01T00:00:00.000Z"
+  }
+]
