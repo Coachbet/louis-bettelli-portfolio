@@ -38,6 +38,14 @@ export type SportEntry = {
   featured?: boolean;
 };
 
+export type Achievement = {
+  title: string;
+  event: string;
+  period: string;
+  description: string;
+  url: string;
+};
+
 export type Profile = {
   name: string;
   title: string;
@@ -57,6 +65,7 @@ export type Profile = {
   certifications: string[];
   interests: string[];
   sports: SportEntry[];
+  achievements: Achievement[];
 };
 
 export const profile: Profile = {
@@ -72,6 +81,15 @@ export const profile: Profile = {
   github: "https://github.com/Coachbet",
   githubUsername: "Coachbet",
   bio: "Raised in a family of engineers with a strong interest in business, I am passionate about AI and data management. I combine technical expertise with an entrepreneurial mindset to build practical solutions with real impact.",
+  achievements: [
+    {
+      title: "Grand Prize winner — Cut the Line",
+      event: "Secure Horizons · Utopia, Kryptosphere & ESSEC Metalab",
+      period: "October 2026",
+      description: "Won the Grand Prize with the Cut the Line team at Secure Horizons, a 36-hour AI and cybersecurity hackathon at ESSEC.",
+      url: "https://www.linkedin.com/feed/update/urn:li:activity:7515767490216624128/",
+    },
+  ],
   experiences: [
     {
       role: "AI & Software Development Intern",

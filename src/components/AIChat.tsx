@@ -2,11 +2,11 @@
 import { FormEvent, useState } from "react";
 const copy = {
   en: {
-    suggestions: ["Your AI experience?", "Tell me about DevXAI", "Your technical skills?", "Your education?", "Your English level?", "Your sports journey?", "Why rugby?", "How can I contact you?"],
+    suggestions: ["Your AI experience?", "Your hackathon win?", "Tell me about DevXAI", "Your technical skills?", "Your education?", "Where is your CV?", "Your sports journey?", "How can I contact you?"],
     intro: "Ask me about my background, skills or projects.", noAnswer: "No answer is available.", unavailable: "The AI assistant is temporarily unavailable.", thinking: "Thinking…", placeholder: "Type your question…", send: "Send", label: "Louis's AI assistant",
   },
   fr: {
-    suggestions: ["Ton expérience en IA ?", "Parle-moi de DevXAI", "Tes compétences techniques ?", "Ta formation ?", "Ton niveau d’anglais ?", "Ton parcours sportif ?", "Pourquoi le rugby ?", "Comment te contacter ?"],
+    suggestions: ["Ton expérience en IA ?", "Ta victoire au hackathon ?", "Parle-moi de DevXAI", "Tes compétences techniques ?", "Ta formation ?", "Où trouver ton CV ?", "Ton parcours sportif ?", "Comment te contacter ?"],
     intro: "Posez-moi une question sur mon parcours, mes compétences ou mes projets.", noAnswer: "Aucune réponse n’est disponible.", unavailable: "L’assistant IA est temporairement indisponible.", thinking: "Réflexion…", placeholder: "Écrivez votre question…", send: "Envoyer", label: "Assistant IA de Louis",
   },
 } as const;

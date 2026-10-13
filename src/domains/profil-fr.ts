@@ -6,6 +6,15 @@ export const profileFr: Profile = {
   tagline:
     "Je construis à l’intersection de l’intelligence artificielle, de la data et du business pour transformer des idées ambitieuses en produits utiles.",
   bio: "Issu d’une famille d’ingénieurs et très intéressé par le business, je suis passionné par l’IA et la gestion des données. J’associe expertise technique et esprit entrepreneurial pour créer des solutions concrètes à fort impact.",
+  achievements: [
+    {
+      title: "Grand Prix remporté — Cut the Line",
+      event: "Secure Horizons · Utopia, Kryptosphere et ESSEC Metalab",
+      period: "Octobre 2026",
+      description: "Grand Prix remporté avec l’équipe Cut the Line lors de Secure Horizons, un hackathon de 36 heures consacré à l’IA et à la cybersécurité à l’ESSEC.",
+      url: "https://www.linkedin.com/feed/update/urn:li:activity:7515767490216624128/",
+    },
+  ],
   experiences: [
     {
       role: "Stagiaire IA & Développement logiciel",

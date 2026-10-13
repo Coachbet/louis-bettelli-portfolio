@@ -12,13 +12,13 @@ const copy = {
   en: {
     portfolio: "Portfolio", github: "GitHub", experience: "Experience", space: "Personal space",
     home: "Back to the top", subtitle: "ESSEC × CentraleSupélec student", explore: "Explore my profile",
-    ask: "Ask my AI", stats: ["Experiences", "Education", "IELTS", "Certifications", "Projects"],
+    ask: "Ask my AI", viewCv: "View CV", stats: ["Experiences", "Education", "IELTS", "Certifications", "Projects"],
     journey: "My journey", hint: "Choose a tab to explore the essentials.",
   },
   fr: {
     portfolio: "Portfolio", github: "GitHub", experience: "Expériences", space: "Espace personnel",
     home: "Retour en haut", subtitle: "Étudiant ESSEC × CentraleSupélec", explore: "Découvrir mon profil",
-    ask: "Poser une question à mon IA", stats: ["Expériences", "Formations", "IELTS", "Certifications", "Projets"],
+    ask: "Poser une question à mon IA", viewCv: "Voir le CV", stats: ["Expériences", "Formations", "IELTS", "Certifications", "Projets"],
     journey: "Mon parcours", hint: "Choisissez un onglet pour découvrir mon profil.",
   },
 } as const;
@@ -45,7 +45,11 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ l
     <main id="top" className="simple-main">
       <section className="simple-hero">
         <Image src="/louis-profile.png" alt="Louis Bettelli" width={156} height={156} priority />
-        <div><p className="simple-overline">AI · DATA · MANAGEMENT</p><h1>LOUIS BETTELLI</h1><h2>{t.subtitle}</h2><p>{content.tagline}</p><div className="simple-contactline"><span>⌖ {content.location}</span><a href={`mailto:${content.email}`}>✉ {content.email}</a></div><div className="hero-buttons"><a href="#portfolio">{t.explore}</a><a href="#assistant">{t.ask}</a></div></div>
+        <div><p className="simple-overline">AI · DATA · MANAGEMENT</p><h1>LOUIS BETTELLI</h1><h2>{t.subtitle}</h2><p>{content.tagline}</p>
+          {content.achievements[0] && <a className="hero-achievement" href={content.achievements[0].url} target="_blank" rel="noreferrer"><span aria-hidden="true">🏆</span>{content.achievements[0].title} · Secure Horizons ↗</a>}
+          <div className="simple-contactline"><span>⌖ {content.location}</span><a href={`mailto:${content.email}`}>✉ {content.email}</a></div>
+          <div className="hero-buttons"><a href="#portfolio">{t.explore}</a><a href="#assistant">{t.ask}</a><a href="/cv/CV_Louis_Bettelli_EN.pdf" target="_blank" rel="noreferrer">{t.viewCv} · EN ↗</a><a href="/cv/CV_Louis_Bettelli_FR.pdf" target="_blank" rel="noreferrer">{t.viewCv} · FR ↗</a></div>
+        </div>
         <div className="simple-links"><a href={content.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn"><span><Image src="/logos/linkedin.svg" alt="" width={24} height={24} /></span><strong>LinkedIn</strong></a><a href={content.github} target="_blank" rel="noreferrer" aria-label="GitHub"><span><Image src="https://cdn.simpleicons.org/github/FFFFFF" alt="" width={24} height={24} unoptimized /></span><strong>GitHub</strong></a><a href={`mailto:${content.secondaryEmails[1] ?? content.email}`} aria-label="Gmail"><span><Image src="https://cdn.simpleicons.org/gmail/EA4335" alt="" width={24} height={24} unoptimized /></span><strong>Gmail</strong></a></div>
       </section>
 
