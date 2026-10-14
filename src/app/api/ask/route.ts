@@ -22,7 +22,7 @@ Experience: ${content.experiences.map((item) => `${item.role} at ${item.company}
 Skills: ${content.skills.flatMap((group) => group.items).join(", ")}
 Sports and activities: ${content.activities.map((item) => `${item.title}, ${item.org}: ${item.bullets.join(" ")}`).join("; ")}
 Sports journey: ${content.sports.map((item) => `${item.name}${item.duration ? ` (${item.duration})` : ""}: ${item.details.join(" ")}`).join("; ")}
-Achievements: ${content.achievements.map((item) => `${item.title} at ${item.event} (${item.period}): ${item.description}`).join("; ")}
+Achievements: ${content.achievements.map((item) => `${item.title} at ${item.event} (${item.period}): ${item.description} GitHub repository: ${item.repositoryUrl}. Award post: ${item.url}.`).join("; ")}
 CVs: English PDF at /cv/CV_Louis_Bettelli_EN.pdf; French PDF at /cv/CV_Louis_Bettelli_FR.pdf.
 Projects: DevXAI is the most complete internship project. Other projects include the Digital360 full-stack portal, a class-based chess game built as the NSI final project in Première four years ago, Space Invader in the first year of higher education, Advance AI, and smaller course projects.`;
 }

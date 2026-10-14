@@ -44,6 +44,7 @@ export type Achievement = {
   period: string;
   description: string;
   url: string;
+  repositoryUrl: string;
 };
 
 export type Profile = {
@@ -88,6 +89,7 @@ export const profile: Profile = {
       period: "October 2026",
       description: "Won the Grand Prize with the Cut the Line team at Secure Horizons, a 36-hour AI and cybersecurity hackathon at ESSEC.",
       url: "https://www.linkedin.com/feed/update/urn:li:activity:7515767490216624128/",
+      repositoryUrl: "https://github.com/Coachbet/projet_utopia",
     },
   ],
   experiences: [
@@ -192,6 +194,12 @@ export const profile: Profile = {
     },
   ],
   activities: [
+    {
+      title: "Consulting Division Member",
+      org: "Utopia — AI Association",
+      period: "Current",
+      bullets: ["Member of the Consulting division of Utopia, an AI association."],
+    },
     {
       title: "Secretary General · Assistant Coach, Second Team",
       org: "ERT — ESSEC Rugby Team",

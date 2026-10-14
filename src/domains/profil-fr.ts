@@ -13,6 +13,7 @@ export const profileFr: Profile = {
       period: "Octobre 2026",
       description: "Grand Prix remporté avec l’équipe Cut the Line lors de Secure Horizons, un hackathon de 36 heures consacré à l’IA et à la cybersécurité à l’ESSEC.",
       url: "https://www.linkedin.com/feed/update/urn:li:activity:7515767490216624128/",
+      repositoryUrl: "https://github.com/Coachbet/projet_utopia",
     },
   ],
   experiences: [
@@ -99,6 +100,12 @@ export const profileFr: Profile = {
     { category: "Langues", items: ["Français (natif)", "Anglais (C1)", "Espagnol (notions)"] },
   ],
   activities: [
+    {
+      title: "Membre du pôle Consulting",
+      org: "Utopia — Association IA",
+      period: "Actuel",
+      bullets: ["Membre du pôle Consulting d’Utopia, une association dédiée à l’IA."],
+    },
     {
       title: "Secrétaire général · Aide coach de l’équipe 2",
       org: "ERT — ESSEC Rugby Team",

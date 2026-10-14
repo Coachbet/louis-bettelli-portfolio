@@ -46,7 +46,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ l
       <section className="simple-hero">
         <Image src="/louis-profile.png" alt="Louis Bettelli" width={156} height={156} priority />
         <div><p className="simple-overline">AI · DATA · MANAGEMENT</p><h1>LOUIS BETTELLI</h1><h2>{t.subtitle}</h2><p>{content.tagline}</p>
-          {content.achievements[0] && <a className="hero-achievement" href={content.achievements[0].url} target="_blank" rel="noreferrer"><span aria-hidden="true">🏆</span>{content.achievements[0].title} · Secure Horizons ↗</a>}
+          {content.achievements[0] && <a className="hero-achievement" href={content.achievements[0].repositoryUrl} target="_blank" rel="noreferrer"><span aria-hidden="true">🏆</span>{content.achievements[0].title} · Secure Horizons ↗</a>}
           <div className="simple-contactline"><span>⌖ {content.location}</span><a href={`mailto:${content.email}`}>✉ {content.email}</a></div>
           <div className="hero-buttons"><a href="#portfolio">{t.explore}</a><a href="#assistant">{t.ask}</a><a href="/cv/CV_Louis_Bettelli_EN.pdf" target="_blank" rel="noreferrer">{t.viewCv} · EN ↗</a><a href="/cv/CV_Louis_Bettelli_FR.pdf" target="_blank" rel="noreferrer">{t.viewCv} · FR ↗</a></div>
         </div>
